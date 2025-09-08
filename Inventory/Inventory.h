@@ -35,8 +35,5 @@ public:
 
 	bool comparePrices (const Inventory& inventory2);
 
-
-
-
 };
 

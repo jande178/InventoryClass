@@ -19,13 +19,15 @@ Inventory::Inventory(double somePrice, int someUnits, std::string someName)
 
 double Inventory::totalCalculateValue()
 {
+	double calculatedValued = itemPrice * unitsAvailable;
+	std::cout << "$" << calculatedValued << "\n";
 
-	return 0.0;
+	return calculatedValued;
 }
 
 std::string Inventory::getItemName()
 {
-	return std::string();
+	return itemName;
 }
 
 void Inventory::setItemName(std::string someName)
@@ -37,21 +39,21 @@ void Inventory::setItemName(std::string someName)
 
 double Inventory::getItemPrice()
 {
-	return 0.0;
+	return itemPrice;
 }
 
 void Inventory::setItemPrice(double somePrice)
 {
 	
-	if (somePrice > 0.0)
+	if (somePrice > 0.00)
 	{
 		itemPrice = somePrice;
 	}
 	else
 	{
 	
-	std::cout << "Price can not be set to less than or equal to 0" << "\n";
-	itemPrice = 0;
+	std::cout << "Price can not be set to less than or equal to 0.0" << "\n";
+	itemPrice = 0.00;
 	}
 
 
@@ -59,7 +61,7 @@ void Inventory::setItemPrice(double somePrice)
 
 int Inventory::getUnitsAvailable()
 {
-	return 0;
+	return unitsAvailable;
 }
 
 void Inventory::setUnitsAvailable(int someUnits)
@@ -92,7 +94,5 @@ bool Inventory::comparePrices(const Inventory& inventory2)
 	{
 		return false;
 	}
-
-}
 
 }
