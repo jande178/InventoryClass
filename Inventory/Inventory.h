@@ -11,6 +11,8 @@ class Inventory
 public:
 	Inventory(); //DEFAULT constructor
 	Inventory(double somePrice, int someUnits ,std::string someName);
+	
+	double totalCalculateValue();
 
 
 	//Getter Accessor to display cout
@@ -30,6 +32,11 @@ public:
 	int getUnitsAvailable();
 
 	void setUnitsAvailable(int someUnits);
+
+	bool comparePrices (const Inventory& inventory2);
+
+
+
 
 };
 

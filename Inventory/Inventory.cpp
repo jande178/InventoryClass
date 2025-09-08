@@ -17,7 +17,11 @@ Inventory::Inventory(double somePrice, int someUnits, std::string someName)
 	itemName = someName;
 }
 
-double calculateTotalValue();
+double Inventory::totalCalculateValue()
+{
+
+	return 0.0;
+}
 
 std::string Inventory::getItemName()
 {
@@ -74,10 +78,21 @@ void Inventory::setUnitsAvailable(int someUnits)
 
 }
 
-double calculateTotalValue()
+bool Inventory::comparePrices(const Inventory& inventory2)
 {
+	if (itemName == inventory2.itemName
+		&&
+		itemPrice == inventory2.itemPrice
+		&&
+		unitsAvailable == inventory2.unitsAvailable)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 
+}
 
-
-	return 0.0;
 }
