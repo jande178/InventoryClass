@@ -33,7 +33,7 @@ public:
 
 	void setUnitsAvailable(int someUnits);
 
-	bool comparePrices (const Inventory& inventory2);
+	/*bool comparePrices (const Inventory& inventory2);*/
 
 };
 

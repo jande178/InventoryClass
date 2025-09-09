@@ -9,24 +9,28 @@ int main()
 
 	std::cout << std::fixed << std::setprecision(2);
 
-	Inventory storePrime = store;
+	/*Inventory storePrime = store;*/
 
 	std::cout << "BEFORE calling any setter and modifying member vars: \n";
 	std::cout << store.getItemName() << "\n";
 	std::cout << store.getItemPrice() << "\n";
 	std::cout << store.getUnitsAvailable() << "\n";
+	std::cout << "\n";
 
-	store.setItemPrice(9215882.21);
-	
+	//Set input examples
+	store.setItemName("CD players");
+	store.setItemPrice(15.23);
+	store.setUnitsAvailable(12);
 
 	std::cout << "AFTER calling any setter and modifying member vars: \n";
 	std::cout << store.getItemName() << "\n";
 	std::cout << store.getItemPrice() << "\n";
 	std::cout << store.getUnitsAvailable() << "\n";
 
+	std::cout << "Total Value: ";
+	store.totalCalculateValue();
 
-
-	std::cout << std::boolalpha << storePrime.comparePrices(store);
+	/*std::cout << std::boolalpha << storePrime.comparePrices(store);*/
 
 	return 0;
 }
